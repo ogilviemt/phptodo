@@ -14,7 +14,8 @@ if(isset($_GET['as'], $_GET['item'])) {
 				WHERE id = :item
 				AND user = :user
 			");
-			
+
+      $doneQuery->execute([
 				'item' => $item,
 				'user' => $_SESSION['user_id']
 			]);
